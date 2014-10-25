@@ -10,15 +10,13 @@
 
 			$session = Session::instance()
 					->id();
-			if ($_POST) {
-				if ($_POST['submit'] = 'В корзину') {
-					$tovar  = ORM::factory('Tovar', $element_id);
-					$min_by = $tovar->min_weight ? $tovar->min_weight : 1;
-					Basket::Add($element_id, $session, $min_by);
-				}
+			if (Arr::get($_POST, 'submit') == 'В боченок') {
+				$tovar  = ORM::factory('Tovar', $element_id);
+				$min_by = $tovar->min_weight ? $tovar->min_weight : 1;
+				Basket::Add($element_id, $session, $min_by);
 			}
 
-			$section_name = ORM::factory('Section', $section_id)->name;
+			$section_name          = ORM::factory('Section', $section_id)->name;
 			$this->template->title = $section_name . " мёд";
 
 
