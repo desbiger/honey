@@ -14,6 +14,7 @@
 				$tovar  = ORM::factory('Tovar', $element_id);
 				$min_by = $tovar->min_weight ? $tovar->min_weight : 1;
 				Basket::Add($element_id, $session, $min_by);
+				$this->redirect('/catalog/'.$section_id.'/'.$element_id);
 			}
 
 			$section_name          = ORM::factory('Section', $section_id)->name;
