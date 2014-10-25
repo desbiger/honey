@@ -6,9 +6,14 @@
 
 	<div style = "float: left; margin-right: 40px" class = "product_img">
 		<? $img = Hfile::Resize($tovar->file->id, 200, 200) ?>
-		<a class = "fancy" href = "<?= $tovar->file->path ?><?= $tovar->file->file_name ?>">
+		<? $default_image = preg_match("|pic1|", $img) ?>
+		<? if (!$default_image): ?>
+			<a class = "fancy" href = "<?= $tovar->file->path ?><?= $tovar->file->file_name ?>">
+				<img src = "<?= $img ?>" alt = "">
+			</a>
+		<? else: ?>
 			<img src = "<?= $img ?>" alt = "">
-		</a>
+		<? endif ?>
 	</div>
 	<div class = "properties">
 		<h2><?= $tovar->name ?></h2>
