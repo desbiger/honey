@@ -43,7 +43,7 @@
 					?></p>
 			</li>
 		</ul>
-		<div class = "form_sub">
+		<div class = "form_sub" style="text-align: left; margin-top: 21px;">
 			<form action = "/catalog/<?= $tovar->section_id ?>/<?= $tovar->id ?>" method = "post">
 				<input type = "submit" name = "submit" value = "В боченок"/>
 			</form>
