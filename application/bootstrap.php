@@ -145,6 +145,11 @@
 	 * Set the routes. Each route must have a minimum of a name, a URI and a set of
 	 * defaults for the URI.
 	 */
+//	Route::set('rodin', 'rodin(/<action>(/<id1>(/<id2>)))')
+//			->defaults(array(
+//					'controller' => 'Rodin',
+//					'action' => 'Index',
+//			));
 	Route::set('pay', 'pay(/<action>(/<id1>(/<id2>)))')
 			->defaults(array(
 					'directory' => 'Public',
