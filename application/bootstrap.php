@@ -133,7 +133,7 @@
 			'honey' => MODPATH . 'honey',
 			'services' => MODPATH . 'services',
 		// Image manipulation
-		// 'minion'     => MODPATH.'minion',     // CLI Tasks
+		 'minion'     => MODPATH.'minion',     // CLI Tasks
 			'orm' => MODPATH . 'orm',
 		// Object Relationship Mapping
 		// 'unittest'   => MODPATH.'unittest',   // Unit testing
